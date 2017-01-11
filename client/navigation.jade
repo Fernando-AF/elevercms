@@ -1,0 +1,52 @@
+template(name="TeacherHome")
+        html
+            body
+                +navigationBar
+
+template(name="navigationBar")
+    .navbar
+        +eleverLogo
+
+        +toggle
+
+        +searchbox
+
+        +user
+
+        +newCourse
+
+        +date
+
+template(name="eleverLogo")
+    .logowrapper
+        .logo
+
+template(name="toggle")
+    .hamburgerwrap
+        h1 
+            i.fa.fa-bars
+
+template(name="searchbox")
+    form(action="#" method="method" class="searchform")
+        input(type="text", placeholder="Search for something...")
+
+template(name="date")
+    .date
+        h4 
+            i.fa.fa-calendar
+        |&emsp;{{today}}
+
+template(name="newCourse")
+    form(action="#" class="createLesson")
+        button(type="submit" class="createBtn") Create A Lesson
+
+template(name="user")
+    .userdata
+        .picture
+            h3 {{uID}}
+        .u-text
+            h4 {{username}}
+            p {{status}}
+        .u-nav
+            h2 
+                i.fa.fa-gear

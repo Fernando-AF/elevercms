@@ -3,13 +3,13 @@ import './navigation.jade';
 
 document.title = "EleverApp"
 
-Template.date.helpers({
+Template.navigationBar.helpers({
   today() {
     return "January 9th, 2017";
   }
 });
 
-Template.user.helpers({
+Template.navigationBar.helpers({
   uID() {
     return "MC";
   },

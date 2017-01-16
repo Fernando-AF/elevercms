@@ -1,6 +1,7 @@
 .panelwrapper{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
     background-color: white;
     font-family: 'Open Sans', sans-serif;
 }
@@ -14,6 +15,7 @@
     background-color: #3e4853;
     text-align: center;
     color: white;
+    float: left;
 }
 
 .title{
@@ -113,8 +115,120 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:937px){
+.mainPanel{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f4;
+    box-sizing: border-box;
+    padding-left: 13%;
+    padding-top: 50px;
+}
+.mainTitle{
+    height: 10%;
+    background-color: white;
+    min-height: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    color: #555555;
+}
+
+.head{
+    height: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 3.7vw;
+    background-color: white;
+    position: relative;
+    margin-bottom: 0.4rem;
+}
+.head h1{
+    font-weight: 300;
+    width: auto;
+    float: left;
+}
+
+.head .fa{
+    font-size: 1.4rem;
+    margin-left: 0.1vw;
+    margin-right: 0.5vw;
+    line-height: 100%;
+}
+
+.head p{
+    font-size: 0.7rem;
+    float: left;
+    height: 100%;
+    line-height: 500%;
+}
+
+.holder{
+    margin-bottom: 0.4rem;
+    float: right;
+    width: 45%;
+    height: 50%;
+    text-align: center;
+    line-height: 115%;
+    margin-right: 14vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+#current{
+    height: 50%;
+    width: 62%;
+    background-color: #30beb5;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: white;
+}
+
+.holder h2{
+    font-weight: 300;
+    margin-left: 1vw;
+    font-size: 1.1rem;
+}
+
+.subTitle{
+    height:10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #555555;
+}
+.sub{
+    background-color: red;
+    display: none;
+    /* FIXME: here */
+}
+
+@media screen and (max-width:960px){
     .sidepanel h5{
         font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width:890px){
+    .holder{
+        margin-right: 0;
+    }
+    .holder h2{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:660px){
+    #update{
+        display: none;
+    }
+    .holder{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .holder{
+        display: none;
     }
 }

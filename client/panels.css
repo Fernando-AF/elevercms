@@ -1,0 +1,120 @@
+.panelwrapper{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidepanel{
+    width: 13%;
+    min-width: 135px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    background-color: #3e4853;
+    text-align: center;
+    color: white;
+}
+
+.title{
+    height: 10%;
+    min-height: 70px;
+    width: 100%;
+    background-color: #292f37;
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+
+.title h5{
+    margin-left: 0.5vw;
+    margin-bottom: 0.5vw;
+    line-height: 100%;
+}
+.underline{
+    border-bottom-style: solid;
+    border-color: #576575;
+    border-width: 1.5px;
+}
+
+.title .fa{
+    color: #22262d;
+    background-color:#576575;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 0.2vw;
+}
+.sidemenuItem{
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 0.5vw;
+    padding-bottom: 3vh;
+    border-bottom: solid;
+    margin-top: 5vh;
+    border-color: #576575;
+    border-width: 1.5px;
+}
+
+.sidemenuItem .fa{
+    background-color:#576575;
+    padding: 5.5px;
+    border-radius: 3px;
+    margin-right: 0.2vw;
+}
+
+.ccount{
+    color: white;
+    line-height: 175%;
+    vertical-align: middle;
+    float: right;
+    margin-right: 0.75vw;
+    box-sizing: border-box;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    background-color:#576575;
+}
+
+.course{
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.course h5{
+    font-weight: 300;
+    cursor: pointer;
+}
+
+
+.chig{
+    padding: 1.5%;
+    background-color: #22262d;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 0.7rem;
+    margin-right: 0.3vw;
+    font-weight: 600;
+}
+
+.course .fa{
+    float: right;
+    background-color: inherit;
+    margin-right: 1vw;
+
+}
+
+#Teams{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    border-style: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:937px){
+    .sidepanel h5{
+        font-size: 0.65rem;
+    }
+}

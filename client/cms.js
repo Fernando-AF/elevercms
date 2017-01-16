@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import './navigation.jade';
+import './home.jade';
 
 document.title = "EleverApp"
 
@@ -18,5 +18,17 @@ Template.navigationBar.helpers({
   },
   status() {
     return "Elever";
+  }
+});
+
+Template.sidemenuItem.helpers({
+  Qcourses() {
+    return "2";
+  }
+});
+
+Template.course.helpers({
+  coursename() {
+    return "Física 2";
   }
 });

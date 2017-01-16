@@ -1,0 +1,36 @@
+template(name="mainpanels")
+    .panelwrapper
+        .sidepanel
+            .title
+                h5 
+                  i.fa.fa-tachometer 
+                  span.underline DASHBOARD
+
+            +sidemenuItem
+            
+            +sidemenuItem
+
+            .sidemenuItem#Teams
+                h5
+                    i.fa.fa-users 
+                    | VIEW TEAMS
+            
+
+template(name="sidemenuItem")
+    .sidemenuItem
+        h5
+            i.fa.fa-file-o 
+            | COURSES
+            span.ccount {{Qcourses}}
+            // loop for each course in db //
+        +course
+
+        +course
+
+
+template(name="course")
+    .course
+        h5
+            span.chig FM
+            | {{coursename}}   
+            .fa.fa-angle-left

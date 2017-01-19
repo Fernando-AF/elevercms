@@ -27,10 +27,11 @@ template(name="mainpanels")
                 .sub
                     h3 Welcome Edgar Lopez!
             .contentwrapper
-                .information
-                .information
-                .information
-                    
+                +mainPanelItem
+
+                +mainPanelItem
+
+                +mainPanelItem
 
 template(name="sidemenuItem")
     .sidemenuItem
@@ -50,3 +51,7 @@ template(name="course")
             span.chig FM
             | {{coursename}}   
             .fa.fa-angle-left
+                
+
+template(name="mainPanelItem")
+    .information

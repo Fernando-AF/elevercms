@@ -230,6 +230,8 @@
     background-color: white;
     float: left;
     margin-bottom: 4vh;
+    border-top-style: solid;
+    border-color: #e4e8eb;
 }
 
 @media screen and (max-width:1040px){
@@ -282,12 +284,39 @@
     .sub h3{
         width: auto;
     }
+    .information{
+        width: 98%;
+    }
+    /* FIXME: appearing and dissapering sidemenu */
+    /*
+    .sidepanel{
+        position: absolute;
+        width:100%;
+        z-index: 1;
+        display: none;
+    }
+    .title h5{
+        font-size: 1rem;
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .sidemenuItem h5{
+        font-size: 0.8rem;
+        padding-left: 0.5rem;
+    }
+    .mainPanel{
+        padding-left: 0;
+    }*/
+    .contentwrapper{
+        overflow-x: hidden;
+    }
 }
 
 @media screen and (max-width:520px) {
     .holder{
         display: none;
     }
+
 }
 
 @media screen and (max-height:750px){

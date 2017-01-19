@@ -236,6 +236,9 @@
     .contentwrapper{
             width:98%;
     }
+    .information{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width:960px){
@@ -250,6 +253,9 @@
     }
     .contentwrapper{
             width:97.5%;
+    }
+    .information{
+        width: 95%;
     }
 }
 

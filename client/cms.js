@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import './home.jade';
+import './cms.jade';
 
 document.title = "EleverApp"
 

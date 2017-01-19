@@ -1,5 +1,6 @@
 .panelwrapper{
     height: 100vh;
+    min-height: 420px;
     width: 100vw;
     box-sizing: border-box;
     background-color: white;
@@ -138,15 +139,14 @@
     height: 50%;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 3.7vw;
     background-color: white;
     position: relative;
-    margin-bottom: 0.4rem;
 }
 .head h1{
     font-weight: 300;
     width: auto;
     float: left;
+    margin-left: 4vw;
 }
 
 .head .fa{
@@ -182,6 +182,7 @@
     font-size: 0.6rem;
     font-weight: 400;
     color: white;
+    line-height: 265%;
 }
 
 .holder h2{
@@ -191,21 +192,64 @@
 }
 
 .subTitle{
-    height:10%;
+    height: 5%;
+    min-height: 40px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    box-sizing: border-box;
     color: #555555;
 }
+
 .sub{
-    background-color: red;
-    display: none;
-    /* FIXME: here */
+    height: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.sub h3{
+    border-top-style: solid;
+    border-color: #009f95;
+    font-weight: 300;
+    width: 22rem;
+    float: left;
+    margin-left: 4vw;
+}
+.contentwrapper{
+    width: 100%;
+    height: 82%;
+    box-sizing: border-box;
+    padding-left: 4vw;
+    overflow-y: scroll;
+}
+
+.information{
+    width: 82%;
+    height: 60%;
+    background-color: white;
+    float: left;
+    margin-bottom: 4vh;
+}
+
+@media screen and (max-width:1040px){
+    .contentwrapper{
+            width:98%;
+    }
 }
 
 @media screen and (max-width:960px){
     .sidepanel h5{
         font-size: 0.65rem;
+    }
+    .holder h2{
+        font-size: 0.9rem;
+    }
+    .sub h3{
+        width: 21rem;
+    }
+    .contentwrapper{
+            width:97.5%;
     }
 }
 
@@ -216,6 +260,16 @@
     .holder h2{
         font-size: 0.8rem;
     }
+    .contentwrapper{
+            width:95%;
+    }
+}
+
+@media screen and (max-width:780px){
+    .contentwrapper{
+            width:auto;
+            overflow-x: scroll;
+    }
 }
 
 @media screen and (max-width:660px){
@@ -225,10 +279,47 @@
     .holder{
         width: 60%;
     }
+    .sub h3{
+        width: auto;
+    }
 }
 
 @media screen and (max-width:520px) {
     .holder{
         display: none;
+    }
+}
+
+@media screen and (max-height:750px){
+    .content{
+        background-color: green;
+        max-height: 73vh
+    }
+    .head h1{
+        margin-bottom: 0.5vh;
+    }
+    .head p{
+        margin-bottom: 0.4rem;
+    }
+}
+
+@media screen and (max-height:610px){
+    .content{
+        background-color: tan;
+        max-height: 68vh;
+    }
+}
+
+@media screen and (max-height:610px){
+    .content{
+        background-color: orange;
+        max-height: 62vh;
+    }
+}
+
+@media screen and (max-height:610px){
+    .content{
+        background-color: orange;
+        max-height: 60vh;
     }
 }

@@ -28,6 +28,7 @@ template(name="mainpanels")
                     h3 Welcome Edgar Lopez!
             .contentwrapper
                 .information
+                    +course_information(title="Course(s) Information")
                 .information
                 .information
                     
@@ -50,3 +51,63 @@ template(name="course")
             span.chig FM
             | {{coursename}}   
             .fa.fa-angle-left
+
+template(name="course_information")
+    .ib_header
+        .ibh_title
+            i.fa.fa-files-o
+            h3 {{title}}
+        .ibh_buttons
+                i.fa.fa-angle-up#toggle
+                i.fa.fa-info-circle
+    .infoContent
+        +course_overview(id="id" cname="Física" professor="Edgar López Mena" email="edgar@itesm.mx" assistant="David Gerardo Guevara C." assistantEmail="dg@altusforge.com" permissions="Edit Content" term="1er. Semestre" department="Ciencias Básicas" licences="200" active="186" leftover="14")
+
+        +course_overview(id="id" cname="Química" professor="Edgar López Mena" email="edgar@itesm.mx" assistant="David Gerardo Guevara C." assistantEmail="dg@altusforge.com" permissions="Edit Content" term="3er. Semestre" department="Ciencias Básicas" licences="150" active="145" leftover="5")
+
+template(name="course_overview")
+    .over_header
+        .over_block
+            h4 Course ID
+            p#titled {{id}}
+        .over_block
+            h4 Course Name
+            p#titled {{cname}}
+    .over_label
+        .over_block
+            h3 Members
+    .over_row
+        .over_block
+            h5 Assigned Professor
+            p {{professor}}
+        .over_block
+            h5 Signed as
+            p {{email}}
+        .over_block
+            h5 Assistant
+            p {{assistant}}
+        .over_block
+            h5 Signed as
+            p {{assistantEmail}}
+        .over_block
+            h5 Permissions
+            p {{permissions}}
+    .over_label
+        .over_block
+            h3 Attendants
+    .over_row
+        .over_block
+            h5 Term
+            p {{term}}
+        .over_block
+            h5 Department
+            p {{department}}
+        .over_block
+            h5 Available licences
+            p {{licences}}
+        .over_block
+            h5 Activated licences
+            p {{active}}
+        .over_block
+            h5 Leftover licences
+            p {{leftover}}

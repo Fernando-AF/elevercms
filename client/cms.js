@@ -1,6 +1,7 @@
 import { Template } from 'meteor/templating';
 import './cms.jade';
 
+var up = true;
 document.title = "EleverApp"
 
 Template.navigationBar.helpers({
@@ -31,4 +32,21 @@ Template.course.helpers({
   coursename() {
     return "Física 2";
   }
+});
+
+Template.course_information.events({
+    'click #toggle' (event, template){
+        var item = template.find("#toggle");
+        template.$(".infoContent").toggle();
+        console.log("Click on toggle");
+        if(up){
+            item.classList.remove("fa-angle-up");
+            item.classList.add("fa-angle-down");
+            up = false;
+        }else{
+            item.classList.remove("fa-angle-down");
+            item.classList.add("fa-angle-up");
+            up= true;
+        }
+    },
 });

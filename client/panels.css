@@ -226,10 +226,114 @@
 
 .information{
     width: 82%;
-    height: 60%;
     background-color: white;
     float: left;
     margin-bottom: 4vh;
+    border-top: solid;
+    border-width: 3px;
+    border-color: #e4e8eb;
+}
+
+.ib_header{
+    width: 100%;
+    height: 4.5vh;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: lightgray;
+}
+.ibh_title{
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top:0.6%;
+    padding-left: 1%;
+    float: left;
+    color: #292f37;
+}
+
+.ibh_title h3{
+    margin-left: 1%;
+    display: inline;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.ibh_buttons{
+    color:#e4e8eb;
+    float: right;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+}
+
+.ibh_buttons .fa{
+    font-size: 1.2rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.infoContent{
+    width: 100%;
+    /*background-color: lightgreen;*/
+}
+.over_header{
+    height: 7vh;
+    width: 100%;
+    background-color: white;
+    border-bottom: solid #009f95 1px;
+    margin-bottom: 1.5%;
+    min-width: 645px;
+    min-height: 50px;
+}
+
+.over_label{
+    height:1.5vh;
+    width:100%;
+    box-sizing: border-box;
+    min-width: 645px;
+    font-size: 0.85rem;
+    min-height: 20px;
+}
+
+.over_row{
+    width: 100%;
+    height: 6vh;
+    min-width: 645px;
+    min-height: 48px;
+    margin-bottom: 1.5%;
+}
+
+.over_block{
+    height: 100%;
+    width: 20%;
+    float: left;
+    text-align: center;;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.over_block h4, .over_block p{
+    width: 100%;
+    font-weight: 300;
+}
+
+.over_block h4, .over_block h5{
+    width: 100%;
+    color: #3bd1a9;
+    font-weight: normal;
+}
+
+.over_block p{
+    font-size: 0.8rem;
+}
+
+#titled{
+    font-size: 1rem;
 }
 
 @media screen and (max-width:1040px){
@@ -269,12 +373,21 @@
     .contentwrapper{
             width:95%;
     }
+    .infoContent{
+        overflow-x: scroll;
+    }
 }
 
 @media screen and (max-width:780px){
     .contentwrapper{
             width:auto;
             overflow-x: scroll;
+    }
+    .ibh_buttons{
+        width: 20%;
+    }
+    .ibh_title{
+        width: 80%;
     }
 }
 
@@ -293,6 +406,15 @@
 @media screen and (max-width:520px) {
     .holder{
         display: none;
+    }
+    .ibh_title .fa{
+        display: none;
+    }
+    .ibh_title{
+        padding-top: 3.5%;
+    }
+    .ibh_title h3{
+        font-size: 1rem;
     }
 }
 

@@ -30,6 +30,7 @@ template(name="mainpanels")
                 .information
                     +course_information(title="Course(s) Information")
                 .information
+                    +group_information(title="Group(s) Information" active="2")
                 .information
                     
 
@@ -111,3 +112,15 @@ template(name="course_overview")
         .over_block
             h5 Leftover licences
             p {{leftover}}
+
+template(name="group_information")
+    .ib_header
+        .ibh_title_group
+            i.fa.fa-users
+            h3 {{title}}
+        .ibh_button_group
+                h4 Assigned Groups
+                .ibh_mark
+                    h5 {{active}}
+                i.fa.fa-angle-up#toggle
+                i.fa.fa-info-circle

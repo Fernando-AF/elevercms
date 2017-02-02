@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import './cms.jade';
 
 var up = true;
+var up2 = true;
 document.title = "EleverApp"
 
 Template.navigationBar.helpers({
@@ -47,6 +48,24 @@ Template.course_information.events({
             item.classList.remove("fa-angle-down");
             item.classList.add("fa-angle-up");
             up= true;
+        }
+    },
+});
+
+
+Template.group_information.events({
+    'click #toggle' (event, template){
+        var item = template.find("#toggle");
+        template.$(".infoContent").toggle();
+        console.log("Click on toggle");
+        if(up2){
+            item.classList.remove("fa-angle-up");
+            item.classList.add("fa-angle-down");
+            up2 = false;
+        }else{
+            item.classList.remove("fa-angle-down");
+            item.classList.add("fa-angle-up");
+            up2= true;
         }
     },
 });

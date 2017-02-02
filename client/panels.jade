@@ -32,7 +32,13 @@ template(name="mainpanels")
                 .information
                     +group_information(title="Group(s) Information" active="2")
                 .information
-                    
+                    .ib_header
+                        .ibh_title_group
+                            i.fa.fa-check-square-o
+                            h3 Recent Activities
+                        .ibh_buttons
+                            i.fa.fa-angle-down
+                            i.fa.fa-info-circle
 
 template(name="sidemenuItem")
     .sidemenuItem
@@ -65,7 +71,6 @@ template(name="course_information")
         +course_overview(id="id" cname="Física" professor="Edgar López Mena" email="edgar@itesm.mx" assistant="David Gerardo Guevara C." assistantEmail="dg@altusforge.com" permissions="Edit Content" term="1er. Semestre" department="Ciencias Básicas" licences="200" active="186" leftover="14")
 
         +course_overview(id="id" cname="Química" professor="Edgar López Mena" email="edgar@itesm.mx" assistant="David Gerardo Guevara C." assistantEmail="dg@altusforge.com" permissions="Edit Content" term="3er. Semestre" department="Ciencias Básicas" licences="150" active="145" leftover="5")
-
 template(name="course_overview")
     .over_header
         .over_block
@@ -124,3 +129,52 @@ template(name="group_information")
                     h5 {{active}}
                 i.fa.fa-angle-up#toggle
                 i.fa.fa-info-circle
+    .infoContent
+        +group_overview(name="Física" query="")
+        +group_overview(name="Química" query="")
+
+template(name="group_overview")
+    .over_header#noBorder
+        .over_block
+            h4 Course name
+            p#titled {{name}}
+    .table_titles
+        .table_block
+            h4 Group
+        .table_block
+            h4 Group ID
+        .table_block
+            h4 Primary Rol
+        .table_block
+            h4 Other Rol(S)
+        .table_block
+            h4 Students
+        .table_block
+            h4 Elever Users
+        .table_block
+            h4 Course start
+        .table_block
+            h4 Course end
+    +group_overview_entry(group="A" groupId="F110098" primary="LDC" other="LDE, Guía de Grupo" students="30" users="28" start="08/15/2016" end="11/04/2016")
+    +group_overview_entry(group="B" groupId="F120098" primary="LDE" other="Guía de Grupo" students="28" users="27" start="08/22/2016" end="11/04/2016")
+
+
+template(name="group_overview_entry")
+    .group_row_wrapper
+        .group_row
+            .table_block#inside
+                p {{group}}
+            .table_block#inside
+                p {{groupId}}
+            .table_block#inside
+                p {{primary}}
+            .table_block#inside
+                p {{other}}
+            .table_block#inside
+                p {{students}}
+            .table_block#inside
+                p {{users}}
+            .table_block#inside
+                p {{start}}
+            .table_block#inside
+                p {{end}}

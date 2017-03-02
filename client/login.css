@@ -15,6 +15,13 @@
     border-radius: 10px;
 }
 
+.login-panel-extended{
+    height: 70%;
+    width: 23%;
+    background-color: white;
+    border-radius: 10px;
+}
+
 .login-panel-header{
     height: 30%;
     width: 100%;
@@ -105,7 +112,7 @@
 
 .login-extras{
     box-sizing: border-box;
-    padding-top: 10%;
+    padding-top: 8.5%;
     text-align: center;
     font-size: 0.8rem;
     color: #7f7f7f;
@@ -119,4 +126,9 @@
     font-size: 0.8rem;
     margin-top: 0.5vh;
     color: white;
+}
+
+#login-linking{
+    font-weight: bold;
+    cursor: pointer;
 }

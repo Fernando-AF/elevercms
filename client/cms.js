@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import './cms.jade';
+import './navBar.jade';
 
 var up = true;
 var up2 = true;
@@ -75,5 +76,13 @@ Template.TeacherHome.events({
     'click #sideToggle' (event, template){
         template.$(".sidepanel").toggle();
         console.log("Clicked on Toggle");
+    }
+});
+
+Template.navigationBar.events({
+    'click #logout':function(){
+        console.log("click on logout bar");
+        Meteor.logout();
+        Router.go('/');
     }
 });

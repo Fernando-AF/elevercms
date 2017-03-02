@@ -191,6 +191,10 @@ color: white !important;
     line-height: 100%;
 }
 
+#logout{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1920px) {
     .hamburgerwrap{
         height: 100%;

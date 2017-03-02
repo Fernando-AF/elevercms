@@ -14,11 +14,11 @@ template(name="navigationBar")
             .picture
                 h3 {{uID}}
             .u-text
-                h4 {{username}}
+                h4 {{currentUser.username}}
                 p {{status}}
             .u-nav
                 h2 
-                    i.fa.fa-gear
+                    i.fa.fa-gear#logout
  
         form(action="#" class="createLesson")
             button(type="submit" class="createBtn") Create A Lesson 

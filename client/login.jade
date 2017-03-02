@@ -1,0 +1,25 @@
+template(name="login")
+    .loginbody
+        .login-panel
+            .login-panel-header
+                img(src="images/logo_elever_centered.png", alt="logo", class="login-logo")
+            .login-panel-body
+
+                +sign_in
+
+            .login-panel-footer
+                .login-extras
+                    p 
+                        i.fa.fa-square-o 
+                        |Keep me logged in
+                    p   Forgot Username or Password?
+        p.login-sign Do not have an acount? Sign up!
+
+template(name="sign_in")
+    .login-panel-loginform
+        form(method="post")
+            h3.login-header Username
+            input(type="text", placeholder="christian@eleverapp.com", name="useremail")
+            h3.login-header Password
+            input(type="password", placeholder=" ", name="userpassword")
+            input(type="submit", value="Login")

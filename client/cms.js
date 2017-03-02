@@ -69,3 +69,11 @@ Template.group_information.events({
         }
     },
 });
+
+
+Template.TeacherHome.events({
+    'click #sideToggle' (event, template){
+        template.$(".sidepanel").toggle();
+        console.log("Clicked on Toggle");
+    }
+});
